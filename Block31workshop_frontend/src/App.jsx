@@ -20,7 +20,10 @@ function App() {
       {
         pets.map((pet) => {
          return (
-           <li key = {pet.id}> {pet.name} </li>
+          <>
+           <li key = {pet.id}> {pet.name} {pet.is_favorite === true ? '*favorite pet*' : ''} </li>
+           
+         </>
          )
         })
       }

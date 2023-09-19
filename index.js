@@ -31,10 +31,10 @@ const setup = async () => {
             name VARCHAR(20),
             is_favorite BOOLEAN
         );
-        INSERT INTO pets (name) VALUES ('Jack');
-        INSERT INTO pets (name) VALUES ('Michael');
-        INSERT INTO pets (name) VALUES ('Austin');
-        INSERT INTO pets (name) VALUES ('Akash')
+        INSERT INTO pets (name, is_favorite) VALUES ('Jack', TRUE);
+        INSERT INTO pets (name, is_favorite) VALUES ('Michael', FALSE);
+        INSERT INTO pets (name, is_favorite) VALUES ('Austin', FALSE);
+        INSERT INTO pets (name, is_favorite) VALUES ('Akash', FALSE)
         
     `;
     await client.query(SQL);
